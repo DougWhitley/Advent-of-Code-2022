@@ -1,18 +1,3 @@
-export function parseInput(input){
-    var accum = 0;
-    var bags = [];
-    input.split('\n').forEach(e => {
-        if(e === ''){
-            bags.push(accum);
-            accum = 0;
-        }
-        else {
-            accum += parseInt(e)
-        }
-    });;
-    return bags;
-}
-
 export function findLargest(inputArray){
     var largestIndex = 0;
     var currentIndex = 0;

@@ -1,15 +1,30 @@
-import { parseInput, findLargest, findTopTotals } from './utility.js';
+import { findLargest, findTopTotals } from './utility.js';
 
-export function partOne() {
-    var input = parseInput(input1);
+export function dayOne() {
+    var input = parseInput(day1Input);
     console.log(findLargest(input));
     console.log(findTopTotals(input,3));
+}
+
+function parseInput(input){
+    var accum = 0;
+    var bags = [];
+    input.split('\n').forEach(e => {
+        if(e === ''){
+            bags.push(accum);
+            accum = 0;
+        }
+        else {
+            accum += parseInt(e)
+        }
+    });;
+    return bags;
 }
 
 
 
 
-var input1 = `9686
+var day1Input = `9686
 10178
 3375
 9638
