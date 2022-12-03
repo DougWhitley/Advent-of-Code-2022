@@ -36,5 +36,6 @@ function setPriorityLookup(){
         priority[theAlphabet[c]] = parseInt(c)+1;
     }
 }
+
 const priority = {};
 const theAlphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
