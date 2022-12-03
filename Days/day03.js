@@ -10,7 +10,6 @@ export function dayThree(){
 
 function partOne(input){
     let result = 0;
-
     input.forEach(element => {
         let part1 = element.slice(0, (element.length/2));
         let part2 = element.slice((element.length/2), element.length);
