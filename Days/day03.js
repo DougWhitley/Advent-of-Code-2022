@@ -13,8 +13,8 @@ function partOne(input){
     let result = 0;
 
     input.forEach(element => {
-        let part1 = element.slice(0, (element.length/2)).slice('');
-        let part2 = element.slice((element.length/2), element.length).slice('');
+        let part1 = element.slice(0, (element.length/2));
+        let part2 = element.slice((element.length/2), element.length);
         var dup = findDuplicates(part1, part2)[0];
         result += priority[dup];
     });
