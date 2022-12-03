@@ -1,4 +1,4 @@
-import { input } from "./Inputs/Day2Input.js";
+import { input } from "../Inputs/day02Input.js";
 
 export function dayTwo(){
     const parsedInput = input.split('\n');

@@ -18,3 +18,15 @@ export function findTopTotals(inputArray, topCount)
         (accumulator, currentValue) => accumulator + currentValue,
     init);
 }
+
+export function findDuplicates(array1, array2){
+    let collisions = {};
+    let found = {};
+    for(let c of array1){
+        found[c] = 1;
+    }
+    for(let c of array2){
+        if(found[c] === 1 && collisions[c] !== 1) collisions[c] = 1;
+    }
+    return Object.keys(collisions);
+}

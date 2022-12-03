@@ -1,5 +1,5 @@
-import { findLargest, findTopTotals } from './utility.js';
-import { input } from './Inputs/Day1Input.js';
+import { findLargest, findTopTotals } from '../utility.js';
+import { input } from '../Inputs/day01Input.js';
 export function dayOne() {
     var parsedInput = parseInput(input);
     console.log(findLargest(parsedInput));
