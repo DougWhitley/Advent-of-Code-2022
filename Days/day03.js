@@ -8,7 +8,6 @@ export function dayThree(){
     console.log(partTwo(parsedInput));
 }
 
-
 function partOne(input){
     let result = 0;
 
