@@ -30,3 +30,13 @@ export function findDuplicates(array1, array2){
     }
     return Object.keys(collisions);
 }
+
+export function rangeEncompasses(outerRange, innerRange){
+    if(outerRange.start <= innerRange.start && outerRange.end >= innerRange.end) return true;
+    return false;
+}
+
+export function rangeOverlaps(range1, range2){
+    if((range1.start >= range2.start && range1.start <= range2.end) || (range1.end >= range2.start && range1.end <= range2.end)) return true;
+    return false;
+}
