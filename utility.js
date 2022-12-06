@@ -40,3 +40,11 @@ export function rangeOverlaps(range1, range2){
     if((range1.start >= range2.start && range1.start <= range2.end) || (range1.end >= range2.start && range1.end <= range2.end)) return true;
     return false;
 }
+
+export function containsDuplicateChar(input){
+    for(let i = 0; i < input.length; i++){
+        let slice = input.slice(i+1)
+        if(slice.includes(input[i])) return true;
+    }
+    return false
+}

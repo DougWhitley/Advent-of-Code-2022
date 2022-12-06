@@ -3,5 +3,6 @@ import { dayTwo } from './day02.js'
 import { dayThree } from './day03.js'
 import { dayFour } from './day04.js'
 import { dayFive } from './day05.js'
+import { daySix } from './day06.js'
 
-export {dayOne, dayTwo, dayThree, dayFour, dayFive}
+export {dayOne, dayTwo, dayThree, dayFour, dayFive, daySix}
