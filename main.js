@@ -1,4 +1,4 @@
-import { dayOne, dayTwo, dayThree, dayFour, dayFive, daySix } from './Days/manifest.js'
+import { dayOne, dayTwo, dayThree, dayFour, dayFive, daySix, daySeven } from './Days/manifest.js'
 
 console.log('Day 1:');
 dayOne();
@@ -12,3 +12,5 @@ console.log('Day 5:')
 dayFive();
 console.log('Day 6:')
 daySix();
+console.log('Day 7:')
+daySeven();

@@ -48,3 +48,41 @@ export function containsDuplicateChar(input){
     }
     return false
 }
+
+
+//Trees
+// node : { prev: <parentNode>, children: <child nodes array>, name: <node key>, value: <node value> }
+export function addChildToNode(node, childKey, childValue = 0){
+    if(node.children === undefined){
+        node.children = [];
+    }
+    node.children.push({prev: node,  name:childKey, value: childValue});
+    node.children.sort((a,b) => a.name - b.name);
+}
+
+export function traverseToChildNode(currentNode, targetKey){
+    let ret = undefined
+   currentNode.children.forEach(c => {
+        if(c.name === targetKey){
+            ret = c;
+        }
+    });
+    if(ret === undefined) console.log(`Could not find ${targetKey}`)
+    return ret;
+}
+
+export function traverseToParentNode (currentNode){
+    return currentNode.prev;
+}
+
+export function calculateValuesHeldInLeaves(currentNode){
+    if(currentNode.children === undefined) return currentNode.value;
+    currentNode.value = currentNode.children.map( e => calculateValuesHeldInLeaves(e)).reduce((a,v) => a+v);
+    return currentNode.value;
+}
+
+export function initializeTree(rootKey){
+    return {prev: undefined, children: undefined, name: rootKey, value: 0}
+
+}
+
